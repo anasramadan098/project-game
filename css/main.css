@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --main-color : #673AB7;
+    --seconde-color : #00BCD4;
+    --height : 400px;
+}
+
+.m-h {
+    height: var(--height);
+}
+
+
+.intro {
+    min-width: 100vw;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #000;
+    transition: opacity 1s ease;
+    display: none;
+    opacity: 0;
+    img {
+        max-width: 100%;
+        transition: .9s;
+        animation:  1s linear;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.log-in {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    video {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .4);
+        z-index: 1;
+    }
+    > *:not(video) {
+        position: relative;
+        z-index: 2;
+    }
+    .content {
+        margin-top: 150px;
+        .logo {
+            color: #fff;
+            width: 100%;
+            font-size: 30px;
+            text-align: center;
+
+        }
+        .btns {
+            margin: 15px 0;
+            .btn {
+                padding: 10px 30px;
+                border-radius: 7px;
+                border: 2px dashed var(--main-color);
+                background: var(--seconde-color);
+                font-style: italic;
+                font-weight: bold;
+                transition: .3s;
+                &:hover {
+                    background-color: transparent;
+                    color: #fff;
+                    border-width: 5px;
+                }
+            }
+        }
+        .social-btns {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            button {
+                padding: 10px;
+                border-radius: 50%;
+                border: 5px dotted var(--border);
+                font-size: 1em;
+                background: var(--bg);
+                color: #fff;
+                transition: .3s;
+                &:hover {
+                    color: var(--bg);
+
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
