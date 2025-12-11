@@ -10,6 +10,7 @@
 document.addEventListener('DOMContentLoaded' , () => {
 
     showVideoIntro()
+    initFullscreenToggle();
 })
 
 
@@ -40,4 +41,44 @@ function endIntro() {
         introDiv.style.display = 'none';
     }, 4000);
 
+}
+
+// Fullscreen toggle initialization and handlers
+function initFullscreenToggle(){
+    const btn = document.querySelector('.fullscreen-toggle');
+    if(!btn) return;
+
+    function isFullscreen(){
+        return !!(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement);
+    }
+
+    function updateIcon(){
+        const icon = btn.querySelector('i');
+        if(!icon) return;
+        if(isFullscreen()){
+            icon.classList.remove('fa-expand');
+            icon.classList.add('fa-compress');
+        } else {
+            icon.classList.remove('fa-compress');
+            icon.classList.add('fa-expand');
+        }
+    }
+
+    btn.addEventListener('click', async () => {
+        try{
+            if(isFullscreen()){
+                if(document.exitFullscreen) await document.exitFullscreen();
+                else if(document.webkitExitFullscreen) await document.webkitExitFullscreen();
+            } else {
+                const el = document.documentElement;
+                if(el.requestFullscreen) await el.requestFullscreen();
+                else if(el.webkitRequestFullscreen) await el.webkitRequestFullscreen();
+            }
+        }catch(err){
+            console.warn('Fullscreen toggle failed:', err);
+        }
+    });
+
+    ['fullscreenchange','webkitfullscreenchange','mozfullscreenchange','MSFullscreenChange'].forEach(ev => document.addEventListener(ev, updateIcon));
+    updateIcon();
 }

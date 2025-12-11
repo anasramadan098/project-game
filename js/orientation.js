@@ -12,7 +12,7 @@
     document.body.style.overflow = isPortrait ? "hidden" : "auto";
   }
 
-  function tryRotateScreen() {
+  function tryRotateScreenn() {
     if (screen.orientation && screen.orientation.lock) {
       screen.orientation.lock("landscape").catch(() => {
         alert("برجاء تدوير الهاتف يدويًا");
@@ -22,8 +22,31 @@
     }
   }
 
+    async function goFullscreen() {
+      const el = document.documentElement;
+      if (el.requestFullscreen) await el.requestFullscreen();
+      else if (el.webkitRequestFullscreen) await el.webkitRequestFullscreen();
+      else if (el.msRequestFullscreen) await el.msRequestFullscreen();
+    }
+
+    async function tryRotateScreen() {
+
+      goFullscreen()
+
+
+
+      try {
+        await screen.orientation.lock("landscape");
+      } catch (e) {
+        alert("اقلب الهاتف يدويًا للوضع الأفقي");
+      }
+
+    }
+
+    // await goFullscreen();
+    // await lockLandscape();
+
   window.addEventListener("load", checkOrientation);
   window.addEventListener("resize", checkOrientation);
   window.addEventListener("orientationchange", checkOrientation);
-
   window.addEventListener("orientationchange", showVideoIntro);
