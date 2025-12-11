@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/orientation.css">
+</head>
+<body>
+    
+
+    <!-- Start Orientation Help -->
+    <div id="rotate-warning">
+        <div class="rotate-icon">📱🔄</div>
+        <div>من فضلك اقلب الهاتف للوضع الأفقي</div>
+        <button onclick="tryRotateScreen()">اضغط للمساعدة</button>
+    </div>
+    <!-- End Orientation Help -->
+
+    <!-- Start Intro -->
+    <div class="intro">
+        <img src="imgs/marketing logo.jfif" class="logo" alt="LOGO">
+    </div>
+    <!-- End Intro -->
+
+
+    <!-- Start Log in -->
+    <div class="log-in m-h">
+        <video loop muted autoplay>
+            <source src="videos/mainBg.mp4" type="video/mp4">
+            Your Browser Does'nt Support Video
+        </video>
+        <audio  style="visibility: hidden;" id="bgMusic" src="music/bg.mp3" loop autoplay  ></audio>
+
+
+        <!-- Centered Content -->
+         <div class="content">
+            <h1 class="logo">
+                LOGO
+            </h1>
+            <div class="btns">
+                <button class="btn login">Log In</button>
+                <button class="btn signup">Sign Up</button>
+            </div>
+            <div class="social-btns">
+                <button class="social-btn apple" style="--bg : #000;">
+                    <i class="fa-brands fa-apple"></i>
+                </button>
+                <button class="social-btn google" style="--bg : #0057e7;">
+                    <i class="fa-brands fa-google"></i>
+                </button>
+            </div>
+         </div>
+
+    </div>
+    <!-- End Log in -->
+
+
+
+    <script src="js/main.js"></script>
+    <script src="js/orientation.js"></script>
+    <script src="js/storage.js"></script>
+</body>
+</html>

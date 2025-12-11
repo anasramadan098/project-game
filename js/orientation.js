@@ -25,3 +25,4 @@
   window.addEventListener("load", checkOrientation);
   window.addEventListener("resize", checkOrientation);
   window.addEventListener("orientationchange", checkOrientation);
+  window.addEventListener("orientationchange", showVideoIntro());
