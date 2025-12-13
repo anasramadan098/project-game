@@ -10,10 +10,12 @@
 </head>
 <body>
     
+    <!-- BG MUSIC -->
+    <audio  style="visibility: hidden;" id="bgMusic" src="music/bg.mp3" loop></audio>
 
     <!-- Start Orientation Help -->
     <div id="rotate-warning">
-        <div class="rotate-icon">📱🔄</div>
+        <div class="rotate-icon">📱</div>
         <div>من فضلك اقلب الهاتف للوضع الأفقي</div>
         <button onclick="goFullscreen()">الشاشة كاملة أولًا</button>
         <button onclick="tryRotateScreen()">إقلب الهاتف</button>
@@ -21,8 +23,11 @@
     <!-- End Orientation Help -->
 
     <!-- Start Intro -->
-    <div class="intro">
-        <img src="imgs/marketing logo.jfif" class="logo" alt="LOGO">
+    <div class="intro loading">
+        <img src="imgs/logo.png" class="logo" alt="LOGO">
+        <button class="btn " id="startGame">
+            Start Game
+        </button>
     </div>
     <!-- End Intro -->
 
@@ -33,7 +38,6 @@
             <source src="videos/mainBg.mp4" type="video/mp4">
             Your Browser Does'nt Support Video
         </video>
-        <audio  style="visibility: hidden;" id="bgMusic" src="music/bg.mp3" loop autoplay  ></audio>
 
         
 
@@ -44,9 +48,7 @@
 
         <!-- Centered Content -->
          <div class="content">
-            <h1 class="logo">
-                LOGO
-            </h1>
+            <img src="imgs/logo.png" class="logo" alt="Logo">
             <div class="btns">
                 <button class="btn login">Log In</button>
                 <button class="btn signup">Sign Up</button>

@@ -7,9 +7,16 @@
   function checkOrientation() {
     if (!isMobileDevice()) return;
 
+    
     const isPortrait = window.innerHeight > window.innerWidth;
+
     warning.style.display = isPortrait ? "flex" : "none";
     document.body.style.overflow = isPortrait ? "hidden" : "auto";
+    if (isPortrait) {
+      bgmusic.volume  = 0 
+    } else {
+      bgmusic.volume = bgMusicVolume;
+    }
   }
 
   function tryRotateScreenn() {
@@ -43,10 +50,8 @@
 
     }
 
-    // await goFullscreen();
-    // await lockLandscape();
 
   window.addEventListener("load", checkOrientation);
   window.addEventListener("resize", checkOrientation);
   window.addEventListener("orientationchange", checkOrientation);
-  window.addEventListener("orientationchange", showVideoIntro);
+  // window.addEventListener("orientationchange", showVideoIntro);

@@ -9,9 +9,18 @@
 
 document.addEventListener('DOMContentLoaded' , () => {
 
-    showVideoIntro()
+    showVideoIntro();
     initFullscreenToggle();
 })
+
+
+document.onload = function () {
+    showVideoIntro();
+}
+
+const bgMusicVolume = 0.4;
+
+
 
 
 
@@ -19,24 +28,37 @@ document.addEventListener('DOMContentLoaded' , () => {
 const introDiv = document.querySelector('.intro');
 
 const logo = introDiv.querySelector('img.logo');
+const bgmusic = document.querySelector('audio#bgMusic');
+bgmusic.volume = bgMusicVolume;
 
+
+document.querySelector('#startGame').addEventListener('click' , () => {
+    endIntro();
+
+    goFullscreen();
+    bgmusic.play();
+
+});
 
 
 function showVideoIntro() {
-    introDiv.style.cssText = 'display: flex; opacity:1; animation-name: fade-in; transition: opacity 1s ease;';
-    logo.style.cssText = 'animation-name: fade-in ';
+
+    hideAllElementsExcept('.intro.loading');
+
+    introDiv.style.cssText = 'display: flex;';
     
-    endIntro();
+    // endIntro();
 
 }
 
 
 function endIntro() {
 
-    setTimeout(() => {
-        introDiv.style.opacity = '0';
-    }, 3000);
-
+    introDiv.style.opacity = '0';
+    showAllElementsExcept('#rotate-warning');
+    // setTimeout(() => {
+    // }, 3000);
+    
     setTimeout(() => {
         introDiv.style.display = 'none';
     }, 4000);
@@ -81,4 +103,34 @@ function initFullscreenToggle(){
 
     ['fullscreenchange','webkitfullscreenchange','mozfullscreenchange','MSFullscreenChange'].forEach(ev => document.addEventListener(ev, updateIcon));
     updateIcon();
+}
+
+
+function hideAllElementsExcept(element = null) {
+
+    document.querySelectorAll('body > div').forEach(el => {
+
+        getComputedStyle(el).display == 'none' ? true :  el.setAttribute('data-display', getComputedStyle(el).display);
+
+        el.style.display = 'none';
+    });
+
+
+    if (element) 
+    {
+        document.querySelectorAll(element).forEach(el => el.style.dispaly = 'block');
+    }
+
+}
+
+
+function showAllElementsExcept(element = null) {
+
+    document.querySelectorAll('body > div').forEach(el => el.style.display = el.dataset.display);
+
+
+    if (element) 
+    {
+        document.querySelectorAll(element).forEach(el => el.style.dispaly = 'none');
+    }
 }
