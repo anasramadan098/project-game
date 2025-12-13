@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketing Game</title>
+    <title>
+        ماركتلي
+    </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/orientation.css">
+    <link rel="stylesheet" href="css/forms.css">
 </head>
-<body>
+<body dir="rtl">
     
     <!-- BG MUSIC -->
     <audio  style="visibility: hidden;" id="bgMusic" src="music/bg.mp3" loop></audio>
@@ -26,18 +29,26 @@
     <div class="intro loading">
         <img src="imgs/logo.png" class="logo" alt="LOGO">
         <button class="btn " id="startGame">
-            Start Game
+            إبدأ اللعبة
         </button>
     </div>
     <!-- End Intro -->
 
+    <!-- Start Msgs -->
+    <div class="msgs">
 
-    <!-- Start Log in -->
-    <div class="log-in m-h">
+    </div>
+    <!-- End Msgs -->
+
+    <!-- Start Home -->
+    <div class="home m-h">
         <video loop muted autoplay>
             <source src="videos/mainBg.mp4" type="video/mp4">
             Your Browser Does'nt Support Video
         </video>
+
+
+
 
         
 
@@ -50,8 +61,12 @@
          <div class="content">
             <img src="imgs/logo.png" class="logo" alt="Logo">
             <div class="btns">
-                <button class="btn login">Log In</button>
-                <button class="btn signup">Sign Up</button>
+                <button class="btn login" onclick="showsignupPopUp('login')">
+                    تسجيل الدخول
+                </button>
+                <button class="btn signup" onclick="showsignupPopUp(1)">
+                    إنشاء حساب
+                </button>
             </div>
             <div class="social-btns">
                 <button class="social-btn apple" style="--bg : #000;">
@@ -61,10 +76,222 @@
                     <i class="fa-brands fa-google"></i>
                 </button>
             </div>
+            <button class="btn auth" onclick="location.href = './game.html' ">
+               إبدأ اللعبة
+            </button>
          </div>
 
     </div>
-    <!-- End Log in -->
+    <!-- End Home -->
+
+    <!-- Start Signup Popup -->
+    <div class="signup pop-up first-sign-up " data-index="1">
+        <form action="#">
+            <h3 class="title">
+                إنشاء حساب
+            </h3>
+            <div class="group">
+                <div class="input">
+                    <label for="full_name">
+                        إسمك بالكامل
+                        <span>*</span>
+                    </label>
+                    <input type="text" id="full_name" name="full_name" required>
+                </div>
+                <div class="input">
+                    <label for="email">
+                    الإيميل
+                        <span>*</span>
+                    </label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            <div class="input">
+                    <label for="full_name">
+                         إسم المستخدم بالإنجليزي (username) 
+                        <span>*</span>
+                    </label>
+                    <input type="text" id="full_name" name="full_name" required>
+            </div>
+            
+            <a class="btn next" onclick="showsignupPopUp(2)" >
+                التالي
+            </a>
+        </form>
+    </div>
+
+    <div class="signup pop-up seconde-sign-up " data-index="2">
+        <form action="">
+            <h3 class="title">
+                أكمل بياناتك
+            </h3>
+            <div class="group">
+                <div class="input">
+                    <label for="phone">
+                       رقم الهاتف
+                    </label>
+                    <input type="tel" id="phone" name="phone" >
+                </div>
+                <div class="input">
+                    <label for="gender">
+                      النوع
+                      <span>*</span>
+                    </label>
+                    <select name="gender" id="gender" required>
+                        <option value="" selected disabled>
+                            إختر النوع
+                        </option>
+                        <option value="male">
+                            ولد
+                        </option>
+                        <option value="female">
+                            بنت
+                        </option>
+                    </select>
+                </div>
+            </div> 
+            <div class="group">
+                <div class="input">
+                    <label for="age">
+                       العمر
+                    </label>
+                    <input type="number" min="10" minlength="2" maxlength="2"  id="age" name="age" >
+                </div>
+                <div class="input">
+                    <label for="full_name">
+                      من أين عرفت اللعبة؟
+                    </label>
+                    <select name="marketing_type" id="marketing_type" >
+                        <option value="" selected disabled>
+                            إختر مصدرك
+                        </option>
+                        <option value="word_of_mouth">
+                            شخص أخبرك عنها
+                        </option>
+                        <option value="social_media">
+                            سوشيال ميديا
+                        </option>
+                        <option value="influncer">
+                            من شخص مشهور او مؤثر
+                        </option>
+                        <option value="google_ads">
+                            إعلانات جوجل
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="group">
+                <a class="btn back" onclick="showsignupPopUp(1)">
+                    رجوع
+                </a>
+                <a class="btn next" onclick="showsignupPopUp(3)">
+                    التالي
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <div class="signup pop-up third-sign-up " data-index="3"> 
+        <form action="">
+            <h3 class="title">
+              اكتب مستواك
+            </h3>
+            <div class="input">
+                <label for="experience">
+                 ايه هي خبراتك
+                </label>
+                <textarea name="experience" id="experience"></textarea>
+            </div>
+            <div class="input">
+                <label for="goals">
+                عارف ايه هي أهدافك؟
+                </label>
+                <textarea name="goals" id="goals"></textarea>
+            </div>
+
+            <div class="group">
+                <a class="btn back" onclick="showsignupPopUp(2)">
+                    رجوع
+                </a>
+                <a class="btn next" onclick="showsignupPopUp(4)">
+                    التالي
+                </a>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="signup pop-up fourth-sign-up " data-index="4">
+        <form action="">
+            <h3 class="title">
+             أمن حسابك
+            </h3>
+
+            <div class="input">
+                <label for="password">
+                    الباسورد
+                    <span>*</span>
+                </label>
+
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="input">
+                <label for="confirm_password">
+                    أكد الباسورد
+                    <span>*</span>
+                </label>
+
+                <input type="password" name="confirm_password" id="confirm_password" required>
+            </div>
+
+
+            <div class="group">
+                <a class="btn back" onclick="showsignupPopUp(3)">
+                    رجوع
+                </a>
+                <a class="btn next" onclick="saveData(this)">
+                    إنشاء الحساب
+                </a>
+            </div>
+        </form>
+    </div> 
+
+    <!-- End Signup Popup -->
+
+    <!-- Start Login Popup-->
+    <div class="login pop-up">
+        <form action="">
+            <h3 class="title">
+            تسجيل الدخول
+            </h3>
+
+            <div class="input">
+                <label for="username_email">
+                    إيميل او إسم المستخدم
+                    <span>*</span>
+                </label>
+
+                <input type="text" name="username_email" id="username_email" required>
+            </div>
+            <div class="input">
+                <label for="password">
+                   الباسورد
+                    <span>*</span>
+                </label>
+
+                <input type="password" name="password" id="password" required>
+            </div>
+
+
+            <div class="group">
+                <a class="btn next" onclick="login(this)">
+                   تسجيل الدخول
+                </a>
+            </div>
+        </form>
+    </div>
+    <!-- End Login Popup-->
 
 
 

@@ -1,0 +1,65 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+
+    .title {
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    > .input {
+        width: 100%;
+    }
+    .group {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        width: 100%;
+        .input {
+            width: calc(100% / 2 - 20px);
+
+        }
+    }
+    label {
+        color: #ddd;
+        margin-bottom: 5px;
+        font-size: 13px;
+        span {
+            color: red;
+        }
+    }
+
+    input , select , textarea {
+        margin-top: 5px;
+        border: 2px dashed var(--main-color);
+        border-radius: 15px;
+        padding: 10px ;
+        outline: none;
+        background-color: transparent;
+        color: #fff;
+        font-size: 10px;
+        width: 100%;
+        resize: none;
+        text-align: right;
+        transition: .3s;
+        &:hover {
+            border-width: 3px;
+            background-color: #333;
+        }
+    }
+    .btn {
+        margin-top: 20px;
+        color: #000;
+        font-size: 13px;
+        &.back {
+            border: 2px dashed var(--seconde-color);
+            background: var(--main-color);
+            color: #fff;
+        }
+    }
+
+}

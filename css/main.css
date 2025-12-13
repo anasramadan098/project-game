@@ -1,12 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "El Messiri", sans-serif;
 }
 :root {
     --main-color : #673AB7;
     --seconde-color : #00BCD4;
     --height : 400px;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
 }
 
 .m-h {
@@ -16,6 +25,39 @@
 body {
     position: relative;
     overflow: hidden;
+}
+.pop-up {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(100%);
+    background-color: rgba(0,0, 0, .9);
+    z-index: 3;
+    min-width: 80%;
+    min-height: 80%;
+    border-radius: 20px;
+    padding: 30px 20px;
+    transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &.active {
+        transform: translate(-50% , -50%);
+    }
+}
+.msgs {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    .msg {
+        padding: 10px 20px;
+        background-color: var(--main-color);
+        color: #fff;
+        border-radius: 6px;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        margin-bottom: 10px;
+    }
 }
 .btn {
     padding: 10px 30px;
@@ -65,7 +107,7 @@ body {
  
 
 
-.log-in {
+.home {
     width: 100%;
     height: 100vh;
     position: relative;
@@ -74,8 +116,8 @@ body {
     align-items: center;
     .full-screen {
         position: absolute;
-        top: 5%;
-        right: 5%;
+        top: 2%;
+        right: 1%;
         padding: 10px;
         border-radius: 50%;
         border-color: #fff;
@@ -114,6 +156,9 @@ body {
             font-size: 30px;
             text-align: center;
 
+        }
+        .auth {
+            display: none;
         }
         .btns {
             margin: 15px 0;

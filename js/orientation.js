@@ -5,13 +5,12 @@
   }
 
   function checkOrientation() {
-    if (!isMobileDevice()) return;
+    // if (!isMobileDevice()) return;
 
     
     const isPortrait = window.innerHeight > window.innerWidth;
 
     warning.style.display = isPortrait ? "flex" : "none";
-    document.body.style.overflow = isPortrait ? "hidden" : "auto";
     if (isPortrait) {
       bgmusic.volume  = 0 
     } else {

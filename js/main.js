@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded' , () => {
 
 
 document.onload = function () {
-    showVideoIntro();
+    // showVideoIntro();
 }
 
 const bgMusicVolume = 0.4;
