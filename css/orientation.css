@@ -12,6 +12,7 @@
       z-index: 9999;
       display: none;
       min-height:100vh;
+      height: 100%; 
     }
 
     .rotate-icon {
@@ -33,3 +34,4 @@
       cursor: pointer;
 
     }
+
