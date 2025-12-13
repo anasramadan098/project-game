@@ -11,6 +11,7 @@
       font-size: 22px;
       z-index: 9999;
       display: none;
+      height:100vh;
     }
 
     .rotate-icon {
