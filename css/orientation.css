@@ -11,7 +11,7 @@
       font-size: 22px;
       z-index: 9999;
       display: none;
-      height:100vh;
+      min-height:100vh;
     }
 
     .rotate-icon {
@@ -31,4 +31,5 @@
       padding: 12px 25px;
       font-size: 18px;
       cursor: pointer;
+
     }
