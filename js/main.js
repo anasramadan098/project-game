@@ -9,7 +9,7 @@
 
 document.addEventListener('DOMContentLoaded' , () => {
 
-    // showVideoIntro();
+    showVideoIntro();
     initFullscreenToggle();
 })
 
@@ -133,4 +133,5 @@ function showAllElementsExcept(element = null) {
     {
         document.querySelectorAll(element).forEach(el => el.style.dispaly = 'none');
     }
+
 }
