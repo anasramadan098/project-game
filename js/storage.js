@@ -1,9 +1,11 @@
 let user = JSON.parse(localStorage.getItem('user')) ?? {};
 
 
-if (Object.keys(user).length > 0) {
-    document.querySelectorAll('.home .social-btns, .home .btns').forEach(el => el.remove());
-    document.querySelector('.home button.auth').style.display = 'block';
+if (document.querySelector('.home button.auth')) {
+    if (Object.keys(user).length > 0) {
+        document.querySelectorAll('.home .social-btns, .home .btns').forEach(el => el.remove());
+        document.querySelector('.home button.auth').style.display = 'block';
+    }
 }
 
 // Validate required fields in current form
@@ -157,4 +159,19 @@ function login(element) {
 
     // navigate to game page
     location.href = './game.html';
+}
+
+
+
+// Enter The Data 
+const gameloopy = document.querySelector('.game-loopy');
+if (gameloopy) {
+    gameloopy.querySelector('.player-name').textContent = user.full_name;
+    gameloopy.querySelector('.progress.xp').dataset.text = `${150} XP`;
+    gameloopy.querySelector('.level').textContent = 3;
+    
+    gameloopy.querySelector('.progress.coins').dataset.text = `${5000}`;
+
+
+    
 }

@@ -10,15 +10,91 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/orientation.css">
     <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/game.css">
 </head>
 <body dir="rtl">
-    <h1 
-    style="
-    text-align: center;
-    margin: 150px auto;"
-    >
-        أهلا بيك في لعبة ماركتلي
-    </h1>
+
+    <!-- BG MUSIC -->
+    <audio  style="visibility: hidden;" id="bgMusic" src="music/bg.mp3" loop></audio>
+
+    <!-- Start Orientation Help -->
+    <div id="rotate-warning">
+        <div class="rotate-icon">📱</div>
+        <div>من فضلك اقلب الهاتف للوضع الأفقي</div>
+        <button onclick="goFullscreen()">الشاشة كاملة أولًا</button>
+        <button onclick="tryRotateScreen()">إقلب الهاتف</button>
+    </div>
+    <!-- End Orientation Help -->
+
+    <!-- Start Intro -->
+    <div class="intro loading">
+        <img src="imgs/logo.png" class="logo" alt="LOGO">
+        <button class="btn " id="startGame">
+            إبدأ اللعبة
+        </button>
+    </div>
+    <!-- End Intro -->
+
+    <!-- Start Msgs -->
+    <div class="msgs">
+
+    </div>
+
+
+
+
+    <div class="main game-loopy">
+        
+        <!-- BG -->
+        <video loop muted autoplay class="gameBg">
+            <source src="videos/gameBg.mp4" type="video/mp4">
+            Your Browser Does'nt Support Video
+        </video>
+
+
+        <!-- Header -->
+        <header class="header">
+            <h2 class="player-name">
+                Anas Ramadan
+            </h2>
+            <div class="bar">
+                <i class="fas fa-star"></i>
+                <div class="progress xp" data-text="150 XP">
+                    <span class="progress-number"> </span>
+                </div>
+                <div class="level">
+                    15
+                </div>
+            </div>
+            <div class="bar">
+                <i class="fas fa-gem"></i>
+                <div class="progress coins" data-text="5000">
+                    <span class="progress-number"> </span>
+                </div>
+            </div>
+        </header>
+
+        <div class="tasks">
+            المهام
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="aiChat">
+                <img src="imgs/ai_robot.png" alt="Ai ROBOT">
+            </div>
+            <div class="icons">
+                <div class="icon">
+                    <i class="fas fa-volume-high"></i>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-gear"></i>
+                </div>
+            </div>
+        </footer>
+
+    </div>
 
 
     <script src="js/main.js"></script>

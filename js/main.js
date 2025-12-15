@@ -9,13 +9,13 @@
 
 document.addEventListener('DOMContentLoaded' , () => {
 
-    showVideoIntro();
+    // showVideoIntro();
     initFullscreenToggle();
 })
 
 
 document.onload = function () {
-    // showVideoIntro();
+    showVideoIntro();
 }
 
 const bgMusicVolume = 0.4;
