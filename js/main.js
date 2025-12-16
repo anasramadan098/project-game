@@ -133,5 +133,4 @@ function showAllElementsExcept(element = null) {
     {
         document.querySelectorAll(element).forEach(el => el.style.dispaly = 'none');
     }
-
 }

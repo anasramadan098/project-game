@@ -47,7 +47,7 @@
         
         <!-- BG -->
         <video loop muted autoplay class="gameBg">
-            <source src="videos/gameBg.mp4" type="video/mp4">
+            <source src="videos/boy_bg.mp4" type="video/mp4">
             Your Browser Does'nt Support Video
         </video>
 
@@ -85,7 +85,7 @@
                 <img src="imgs/ai_robot.png" alt="Ai ROBOT">
             </div>
             <div class="icons">
-                <div class="icon">
+                <div class="icon sound-icon play" onclick="toogleMute()">
                     <i class="fas fa-volume-high"></i>
                 </div>
                 <div class="icon">
@@ -100,5 +100,30 @@
     <script src="js/main.js"></script>
     <script src="js/orientation.js"></script>
     <script src="js/storage.js"></script>
+    <script>
+        if (user.gender == 'female') 
+        {
+            document.querySelector('.gameBg').src = 'videos/girl_bg.mp4';
+        } else {
+            document.querySelector('.gameBg').src = 'videos/boy_bg.mp4';
+        }
+
+        function toogleMute() {
+            const soundIcon = document.querySelector('.sound-icon i');
+            if (soundIcon.classList.contains('fa-volume-high')) {
+                soundIcon.classList.remove('fa-volume-high');
+                soundIcon.classList.add('fa-volume-xmark');
+                document.querySelector('#bgMusic').muted = true;
+                // document.querySelector('#bgMusic').pause();
+            } else {
+                soundIcon.classList.remove('fa-volume-xmark');
+                soundIcon.classList.add('fa-volume-high');
+                document.querySelector('#bgMusic').muted = false;
+                // document.querySelector('#bgMusic').play();
+        }
+    }
+
+
+    </script>
 </body>
 </html>
