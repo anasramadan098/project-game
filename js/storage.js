@@ -31,10 +31,10 @@ function validateRequiredFields(popupNumber) {
     return isValid;
 }
 
-function showsignupPopUp(number = 1) {
+function showPopUp(number = 1) {
 
     if (number == 'login') {
-        const loginForm  =document.querySelector('.login.pop-up');
+        const loginForm  = document.querySelector('.login.pop-up');
         loginForm.classList.add('active');
         if (user.full_name) {
             loginForm.querySelector('input')[0].value = user.username;
@@ -61,11 +61,12 @@ function showsignupPopUp(number = 1) {
         preEl.classList.remove('active');
     }
 
-    const signup = document.querySelector(`.signup[data-index="${number}"]`);
+    const signup = document.querySelector(`.pop-up[data-index="${number}"]`);
     if(signup) {
         signup.classList.add('active')
     }
 }
+
 
 function saveData(e) {
     const currForm = e.parentElement.parentElement;
@@ -84,7 +85,7 @@ function saveData(e) {
     user = data;
     
 
-    showsignupPopUp(0);
+    showPopUp(0);
 
     showMessage(
         `حسابك إتسجل تعرف تسجل بيه دلوقتي !`
@@ -149,7 +150,7 @@ function login(element) {
     // Check
 
     if (Object.keys(user).length == 0) {
-        showsignupPopUp(0);
+        showPopUp(0);
         showMessage(
             `يرجي إنشاء حساب أولًا !`
         )
@@ -160,6 +161,7 @@ function login(element) {
     // navigate to game page
     location.href = './game.html';
 }
+
 
 
 

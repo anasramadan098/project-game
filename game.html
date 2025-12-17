@@ -55,20 +55,20 @@
         <!-- Header -->
         <header class="header">
             <h2 class="player-name">
-                Anas Ramadan
+                
             </h2>
             <div class="bar">
                 <i class="fas fa-star"></i>
-                <div class="progress xp" data-text="150 XP">
+                <div class="progress xp" data-text="">
                     <span class="progress-number"> </span>
                 </div>
                 <div class="level">
-                    15
+                    
                 </div>
             </div>
             <div class="bar">
                 <i class="fas fa-gem"></i>
-                <div class="progress coins" data-text="5000">
+                <div class="progress coins" data-text="">
                     <span class="progress-number"> </span>
                 </div>
             </div>
@@ -77,8 +77,29 @@
         <div class="tasks">
             المهام
         </div>
+        
 
-
+        <div class="video_view pop-up">
+            <!-- Close ICON -->
+             <div class="close-icon">
+                <i class="fa-solid fa-x"></i>
+             </div>
+            <div class="video-container">
+                <iframe class="course_view" data-current_video="0" src="https://www.youtube-nocookie.com/embed/DKBjWxv-wy0?si=me8BVkSEUcItwJFT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; compute-pressure" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        <p class="video-fallback">لو ظهر خطأ في مشغل الفيديو: <a href="https://youtu.be/DKBjWxv-wy0" target="_blank" rel="noopener">افتح الفيديو على يوتيوب</a></p>
+            </div>
+            <div class="text">
+                <h3>
+                    
+                </h3>
+                <p>
+                    
+                </p>
+                <button class="btn" onclick="nextLesson()">
+                    التالي
+                </button>
+           </div>
+        </div>
+        
         <!-- Footer -->
         <footer class="footer">
             <div class="aiChat">
@@ -100,30 +121,7 @@
     <script src="js/main.js"></script>
     <script src="js/orientation.js"></script>
     <script src="js/storage.js"></script>
-    <script>
-        if (user.gender == 'female') 
-        {
-            document.querySelector('.gameBg').src = 'videos/girl_bg.mp4';
-        } else {
-            document.querySelector('.gameBg').src = 'videos/boy_bg.mp4';
-        }
-
-        function toogleMute() {
-            const soundIcon = document.querySelector('.sound-icon i');
-            if (soundIcon.classList.contains('fa-volume-high')) {
-                soundIcon.classList.remove('fa-volume-high');
-                soundIcon.classList.add('fa-volume-xmark');
-                document.querySelector('#bgMusic').muted = true;
-                // document.querySelector('#bgMusic').pause();
-            } else {
-                soundIcon.classList.remove('fa-volume-xmark');
-                soundIcon.classList.add('fa-volume-high');
-                document.querySelector('#bgMusic').muted = false;
-                // document.querySelector('#bgMusic').play();
-        }
-    }
-
-
-    </script>
+    <script src="js/levels.js"></script>
+    <script src="js/game.js"></script>
 </body>
 </html>
