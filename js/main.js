@@ -1,10 +1,4 @@
-/**
- * Steps
- * [1] Show Video Intro (true)
- * [2] Log In Page
- * [3] Sign Up Proccess
- * [4] Start The Game 
- */
+const fields = ['fashion'];
 
 
 
@@ -42,6 +36,22 @@ document.querySelector('#startGame').addEventListener('click' , () => {
     bgmusic.play();
 
 });
+
+const cards = document.querySelectorAll('form .cards .card')
+cards.forEach(card => {
+    card.addEventListener('click' , e => {
+        cards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+
+        if (fields.find(v => v == card.dataset.value) != undefined) {
+            document.querySelector('input[name="field"]').value = card.dataset.value
+        } else {
+            alert('المجال مكتوب بالخطأ يرجي إعادة تحميل الصفحة') ;
+            location.reload();
+        }
+
+    })
+})
 
 
 function showVideoIntro() {

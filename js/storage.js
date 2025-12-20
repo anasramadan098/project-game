@@ -37,8 +37,8 @@ function showPopUp(number = 1) {
         const loginForm  = document.querySelector('.login.pop-up');
         loginForm.classList.add('active');
         if (user.full_name) {
-            loginForm.querySelector('input')[0].value = user.username;
-            loginForm.querySelector('input')[1].value = user.password;
+            loginForm.querySelectorAll('input')[0].value = user.username;
+            loginForm.querySelectorAll('input')[1].value = user.password;
         }
         return;
     }
