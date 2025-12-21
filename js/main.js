@@ -4,16 +4,16 @@ const fields = ['fashion'];
 
 
 
-document.addEventListener('DOMContentLoaded' , () => {
+// document.addEventListener('DOMContentLoaded' , () => {
 
-    showVideoIntro();
-    initFullscreenToggle();
-})
+//     showVideoIntro();
+//     initFullscreenToggle();
+// })
 
 
-document.onload = function () {
-    showVideoIntro();
-}
+// document.onload = function () {
+//     showVideoIntro();
+// }
 
 const bgMusicVolume = 0.4;
 
@@ -147,3 +147,14 @@ function showAllElementsExcept(element = null) {
         document.querySelectorAll(element).forEach(el => el.style.dispaly = 'none');
     }
 }
+
+// دالة لتعديل قيمة animation progress bar
+function setProgressWidth(percentage) {
+    const progressContainer = document.querySelector('.progress-container');
+    if (progressContainer) {
+        progressContainer.style.setProperty('--progress-width', percentage + '%');
+    }
+}
+
+// مثال على الاستخدام:
+// setProgressWidth(60); // سيجعل الـ progress bar يصل إلى 60%

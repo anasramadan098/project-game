@@ -198,4 +198,45 @@
             }
         }
     }
+    .tasks-view {
+        i {
+            font-size: .9em;
+            color: #fff;
+        }
+        h3 {
+            color: #eee;
+            font-size: .9em;
+            text-align: center;
+        }
+        .tasks-container {
+            overflow: scroll;
+            margin: 20px 0;
+            max-height: 250px;
+            .task {
+                border: 1px solid #eee;
+                border-radius: 20px;
+                padding: 8px;
+                .title {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 30px;
+                    h4 {
+                        color: var(--seconde-color);
+    
+                    }   
+                    .btn {
+                        padding: 5px 6px;
+                        border-width: 1px;
+                        font-size: 0.7em;
+                    }
+                }
+                p {
+                    color: #777;
+                    font-size: .7em;
+                    margin: 5px 0;
+                }             
+            }
+        }
+    }
 }

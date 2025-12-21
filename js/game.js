@@ -6,7 +6,14 @@ if (user.gender == 'female')
     document.querySelector('.gameBg').src = 'videos/boy_bg.mp4';
 }
 
-// Show Levels Task
+
+document.querySelectorAll('.close-icon').forEach(e => {
+    e.addEventListener('click' , () => {
+        e.parentElement.classList.remove('active');
+    })
+});
+
+
 
 
 
@@ -36,8 +43,7 @@ function toogleMute() {
         soundIcon.classList.add('fa-volume-high');
         document.querySelector('#bgMusic').muted = false;
         // document.querySelector('#bgMusic').play();
+    }
 }
-}
-
 
 

@@ -7,6 +7,7 @@
         ماركتلي
     </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/orientation.css">
     <link rel="stylesheet" href="css/forms.css">
@@ -78,7 +79,7 @@
             المهام
         </div>
         
-        <div class="tasks-view pop-up">
+        <div class="tasks-view pop-up active">
             <!-- Close ICON -->
             <div class="close-icon">
                 <i class="fa-solid fa-x"></i>
@@ -87,24 +88,39 @@
                 المهام الخاصة بك
             </h3>
             <div class="tasks-container">
-                <div class="task">
-                    <h4>
-                        إسم المهمة بشكل عريض
-                    </h4>
+                <!-- <div class="task">
+                    <div class="title">
+                        <h4>
+                             إسم المهمة بشكل عريض
+                        </h4>
+                        <button class="btn">
+                            أكمل المهمة
+                        </button>
+                    </div>
                     <p>
                         وصف المهمة بشكل عادي
                     </p>
-                    <!-- Progress -->
+                    <div class="progress-container">
+                        <div class="progress-bar"></div>
+                        <div class="progress-text">40%</div>
+                        <div class="particles">
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                        </div>
+                    </div>
                     
-                </div>
+                </div> -->
             </div>
         </div>
 
         <div class="video_view pop-up">
             <!-- Close ICON -->
-             <div class="close-icon">
-                <i class="fa-solid fa-x"></i>
-             </div>
+            <div class="close-icon">
+            <i class="fa-solid fa-x"></i>
+            </div>
             <div class="video-container">
                 <iframe class="course_view" data-current_video="0" src="https://www.youtube-nocookie.com/embed/DKBjWxv-wy0?si=me8BVkSEUcItwJFT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; compute-pressure" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      
             </div>

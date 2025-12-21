@@ -28,12 +28,12 @@ body {
     overflow: hidden;
 }
 .pop-up {
-    position: absolute;
+    position: absolute !important;
     left: 50%;
     top: 50%;
     transform: translateX(100%);
     background-color: rgba(0,0, 0, .9);
-    z-index: 3;
+    z-index: 5 !important;
     min-width: 80%;
     min-height: 80%;
     border-radius: 20px;
@@ -115,7 +115,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
     .full-screen {
         position: absolute;
         top: 2%;
