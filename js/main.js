@@ -4,16 +4,16 @@ const fields = ['fashion'];
 
 
 
-// document.addEventListener('DOMContentLoaded' , () => {
+document.addEventListener('DOMContentLoaded' , () => {
 
-//     showVideoIntro();
-//     initFullscreenToggle();
-// })
+    showVideoIntro();
+    initFullscreenToggle();
+})
 
 
-// document.onload = function () {
-//     showVideoIntro();
-// }
+document.onload = function () {
+    showVideoIntro();
+}
 
 const bgMusicVolume = 0.4;
 
@@ -158,3 +158,4 @@ function setProgressWidth(percentage) {
 
 // مثال على الاستخدام:
 // setProgressWidth(60); // سيجعل الـ progress bar يصل إلى 60%
+
