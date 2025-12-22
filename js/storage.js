@@ -169,10 +169,10 @@ function login(element) {
 const gameloopy = document.querySelector('.game-loopy');
 if (gameloopy) {
     gameloopy.querySelector('.player-name').textContent = user.full_name;
-    gameloopy.querySelector('.progress.xp').dataset.text = `${150} XP`;
+    gameloopy.querySelector('.progress.xp').dataset.text = `${user.xp} XP`;
     gameloopy.querySelector('.level').textContent = 3;
     
-    gameloopy.querySelector('.progress.coins').dataset.text = `${5000}`;
+    gameloopy.querySelector('.progress.coins').dataset.text = `${user.coins}`;
 
 
     
