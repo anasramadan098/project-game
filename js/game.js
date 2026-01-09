@@ -1,3 +1,5 @@
+
+
 // Toogle Video
 if (user.gender == 'female') 
 {
@@ -10,6 +12,7 @@ if (user.gender == 'female')
 document.querySelectorAll('.close-icon').forEach(e => {
     e.addEventListener('click' , () => {
         e.parentElement.classList.remove('active');
+        bgMusic.play();
     })
 });
 

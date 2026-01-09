@@ -39,9 +39,44 @@ body {
     border-radius: 20px;
     padding: 30px 20px;
     transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
+    .submit {
+        margin-top: 10px;
+    }
     &.active {
         transform: translate(-50% , -50%);
+    }
+    i.fa-x {
+        font-size: .9em;
+        color: #fff;
+    }
+    h3 {
+        color: #eee;
+        font-size: .9em;
+        text-align: center;
+    }
+    p {
+        text-align: center;
+        font-size: 0.9em;
+        color: #666;
+        margin-bottom: 20px;
+        text-align: right;
+    }
+    > div:not(.close-icon) , > form {
+            overflow: scroll;
+            max-height: 250px;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+            margin: 10px 0;
+            &::-webkit-scrollbar {
+                width: 0;  /* Remove scrollbar space */
+                background: transparent;  /* Optional: just make scrollbar invisible */
+            }
+            &::-webkit-scrollbar-thumb {
+                background: transparent; /* Optional: just make scrollbar invisible */
+            }
+    }
+    form {
+        align-items: normal;
     }
 }
 .msgs {
@@ -67,6 +102,7 @@ body {
     background: var(--seconde-color);
     font-style: italic;
     font-weight: bold;
+    width: fit-content;
     transition: .3s;
     &:hover {
         background-color: transparent;

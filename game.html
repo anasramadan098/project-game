@@ -2,7 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="shortcut icon" href="imgs/logo.png" type="image/x-icon">
     <title>
         ماركتلي
     </title>
@@ -35,6 +36,69 @@
         </button>
     </div>
     <!-- End Intro -->
+
+    <!-- Setting -->
+     <div class="pop-up setting ">
+        <!-- Close ICON -->
+        <div class="close-icon">
+            <i class="fa-solid fa-x"></i>
+        </div>
+        <h3>
+            الإعدادات
+        </h3>
+        <form>
+            
+            <div class="group">  
+                <div class="input">
+                    <label for="full_name">
+                        الإسم
+                        <span>*</span>
+                    </label>
+    
+                    <input type="text" name="full_name" id="full_name"  required>
+                </div>
+
+                <div class="input">
+                    <label for="age">
+                        السن
+                        <span>*</span>
+                    </label>
+    
+                    <input type="text" name="age" id="age"  required>
+                </div>
+            </div>
+            <div class="group">  
+                <div class="input">
+                    <label for="email">
+                        الإييل
+                        <span>*</span>
+                    </label>
+    
+                    <input type="email" name="email" id="email"  required>
+                </div>
+
+                <div class="input">
+                    <label for="phone">
+                        الهاتف
+                        <span>*</span>
+                    </label>
+    
+                    <input type="tel" name="phone" id="phone"  required>
+                </div>
+            </div>
+            <div class="group">
+                <a class="btn back">
+                    تغيير الباسورد
+                </a>
+                <a class="btn next" >
+                    تغيير المجال
+                </a>
+            </div>
+            <a class="btn" id="update-btn" style="background-color: #3f51b5; color: #fff;">
+                   تحديث البيانات
+            </a>
+        </form>
+     </div>
 
     <!-- Start Msgs -->
     <div class="msgs">
@@ -88,41 +152,16 @@
                 المهام الخاصة بك
             </h3>
             <div class="tasks-container">
-                <!-- <div class="task">
-                    <div class="title">
-                        <h4>
-                             إسم المهمة بشكل عريض
-                        </h4>
-                        <button class="btn">
-                            أكمل المهمة
-                        </button>
-                    </div>
-                    <p>
-                        وصف المهمة بشكل عادي
-                    </p>
-                    <div class="progress-container">
-                        <div class="progress-bar"></div>
-                        <div class="progress-text">40%</div>
-                        <div class="particles">
-                            <div class="particle"></div>
-                            <div class="particle"></div>
-                            <div class="particle"></div>
-                            <div class="particle"></div>
-                            <div class="particle"></div>
-                        </div>
-                    </div>
-                    
-                </div> -->
             </div>
         </div>
 
-        <div class="video_view pop-up">
+        <div class="video_view pop-up" data-current_video="0">
             <!-- Close ICON -->
             <div class="close-icon">
             <i class="fa-solid fa-x"></i>
             </div>
             <div class="video-container">
-                <iframe class="course_view" data-current_video="0" src="https://www.youtube-nocookie.com/embed/DKBjWxv-wy0?si=me8BVkSEUcItwJFT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; compute-pressure" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      
+                <iframe class="course_view"  src="https://www.youtube-nocookie.com/embed/DKBjWxv-wy0?si=me8BVkSEUcItwJFT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; compute-pressure" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      
             </div>
             <div class="text">
                 <h3>
@@ -152,20 +191,482 @@
             </div>
         </div>
         
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="aiChat">
-                <img src="imgs/ai_robot.png" alt="Ai ROBOT">
+
+
+    <!-- Another Pop Ups -->
+        <div class="pop-up apply-task stp-1">
+            <!-- Close ICON -->
+            <div class="close-icon">
+                <i class="fa-solid fa-x"></i>
             </div>
-            <div class="icons">
-                <div class="icon sound-icon play" onclick="toogleMute()">
-                    <i class="fas fa-volume-high"></i>
-                </div>
-                <div class="icon">
-                    <i class="fas fa-gear"></i>
-                </div>
+            <h3>
+                إختر منطقتك المستدفة (التجزئة الجغرافي)                
+            </h3>
+            <div class="choices">
+                
             </div>
-        </footer>
+
+            <button class="btn submit">
+                التالي
+            </button>
+        </div>
+        
+        <div class="pop-up apply-task stp-2">
+
+                <!-- Close ICON -->
+                <div class="close-icon">
+                    <i class="fa-solid fa-x"></i>
+                </div>
+                <h3>
+                    طبّق استراتيجية التجزئة (Segmentation) لمنتجك
+                </h3>
+                <form action="" class="form">
+                    <p>
+                        املأ البيانات التالية لتحديد شرائح السوق المختلفة التي يستهدفها منتجك. كل نوع تجزئة يساعدك على فهم عملائك بشكل أفضل.
+                    </p>
+                    
+                    <!-- Demographic Segmentation Section -->
+                    <div style="border-right: 4px solid #ff6b6b; padding-right: 15px; margin-bottom: 25px;">
+                        <h4 style="color: #ff6b6b; margin-bottom: 15px;">
+                            <i class="fas fa-users" style="margin-left: 8px;"></i> التجزئة الديموغرافية 👥
+                        </h4>
+                        <p style="font-size: 0.85em; color: #555; margin-bottom: 12px;">
+                            تصنيف العملاء بناءً على خصائصهم الشخصية والاقتصادية
+                        </p>
+
+                        <div class="input">
+                            <label for="demographic_age_range">
+                                🎂 الفئة العمرية المستهدفة
+                                <span style="color: #999; font-size: 0.85em;"> (مثال: 25-45 سنة)</span>
+                            </label>
+                            <input type="text" id="demographic_age_range" name="demographic_age_range" placeholder="حدد نطاق السن الذي تستهدفه">
+                        </div>
+
+                        <div class="input">
+                            <label for="demographic_gender">
+                                👫 النوع/الجنس المستهدف
+                            </label>
+                            <select name="demographic_gender" id="demographic_gender">
+                                <option value="">-- اختر --</option>
+                                <option value="male">ذكور فقط</option>
+                                <option value="female">إناث فقط</option>
+                                <option value="both">كلا الجنسين</option>
+                            </select>
+                        </div>
+
+                        <div class="input">
+                            <label for="demographic_education">
+                                🎓 المستوى التعليمي
+                                <span style="color: #999; font-size: 0.85em;"> (مثال: جامعي، دراسات عليا)</span>
+                            </label>
+                            <input type="text" id="demographic_education" name="demographic_education" placeholder="ما هو المستوى التعليمي لجمهورك؟">
+                        </div>
+
+                        <div class="input">
+                            <label for="demographic_family_status">
+                                👨‍👩‍👧‍👦 الحالة الاجتماعية والأسرية
+                                <span style="color: #999; font-size: 0.85em;"> (أعزب، متزوج، لديه أطفال...)</span>
+                            </label>
+                            <input type="text" id="demographic_family_status" name="demographic_family_status" placeholder="هل لهم أطفال؟ ما حالتهم الاجتماعية؟">
+                        </div>
+
+                        <div class="input">
+                            <label for="demographic_income_level">
+                                💰 مستوى الدخل والقوة الشرائية
+                                <span style="color: #999; font-size: 0.85em;"> (منخفض، متوسط، مرتفع)</span>
+                            </label>
+                            <input type="text" id="demographic_income_level" name="demographic_income_level" placeholder="حدد فئة الدخل التي يمكنها شراء منتجك">
+                        </div>
+
+                        <div class="input">
+                            <label for="demographic_occupation">
+                                💼 المهنة أو القطاع
+                                <span style="color: #999; font-size: 0.85em;"> (مثال: موظفون، رجال أعمال، طلاب)</span>
+                            </label>
+                            <input type="text" id="demographic_occupation" name="demographic_occupation" placeholder="ما هي المهن الرئيسية لعملائك المستهدفين؟">
+                        </div>
+                    </div>
+
+                    <!-- Psychographic Segmentation Section -->
+                    <div style="border-right: 4px solid #4ecdc4; padding-right: 15px; margin-bottom: 25px;">
+                        <h4 style="color: #4ecdc4; margin-bottom: 15px;">
+                            <i class="fas fa-brain" style="margin-left: 8px;"></i> التجزئة النفسية 🧠
+                        </h4>
+                        <p style="font-size: 0.85em; color: #555; margin-bottom: 12px;">
+                            تصنيف العملاء بناءً على شخصيتهم وقيمهم وأسلوب حياتهم
+                        </p>
+
+                        <div class="input">
+                            <label for="psychographic_lifestyle">
+                                🏃 نمط الحياة والاهتمامات
+                                <span style="color: #999; font-size: 0.85em;"> (مثال: رياضة، سفر، تكنولوجيا)</span>
+                            </label>
+                            <input type="text" id="psychographic_lifestyle" name="psychographic_lifestyle" placeholder="ما الأنشطة والاهتمامات التي تميز عملائك؟">
+                        </div>
+
+                        <div class="input">
+                            <label for="psychographic_values">
+                                ✨ القيم والمعتقدات الأساسية
+                                <span style="color: #999; font-size: 0.85em;"> (مثال: الاستدامة، الجودة، الابتكار)</span>
+                            </label>
+                            <input type="text" id="psychographic_values" name="psychographic_values" placeholder="ما القيم التي يهتمون بها؟ (البيئة، الجودة، السعر...)">
+                        </div>
+
+                        <div class="input">
+                            <label for="psychographic_personality">
+                                🎭 نوع الشخصية
+                                <span style="color: #999; font-size: 0.85em;"> (قيادي، محافظ، جريء، عملي...)</span>
+                            </label>
+                            <input type="text" id="psychographic_personality" name="psychographic_personality" placeholder="كيف تصف شخصية عملائك المثاليين؟">
+                        </div>
+
+                        <div class="input">
+                            <label for="psychographic_aspirations">
+                                🌟 الطموحات والأحلام
+                                <span style="color: #999; font-size: 0.85em;"> (ماذا يريدون أن يحققوا في الحياة؟)</span>
+                            </label>
+                            <textarea id="psychographic_aspirations" name="psychographic_aspirations" placeholder="ما الذي يطمح إليه جمهورك المستهدف؟ ما أحلامهم؟"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Behavioral Segmentation Section -->
+                    <div style="border-right: 4px solid #ffd93d; padding-right: 15px; margin-bottom: 25px;">
+                        <h4 style="color: #ffd93d; margin-bottom: 15px;">
+                            <i class="fas fa-chart-line" style="margin-left: 8px;"></i> التجزئة السلوكية 📊
+                        </h4>
+                        <p style="font-size: 0.85em; color: #555; margin-bottom: 12px;">
+                            تصنيف العملاء بناءً على سلوكهم الشرائي والاستخدام
+                        </p>
+
+                        <div class="input">
+                            <label for="behavioral_purchase_frequency">
+                                🛍️ تكرار الشراء المتوقع
+                                <span style="color: #999; font-size: 0.85em;"> (يومي، أسبوعي، شهري، سنوي)</span>
+                            </label>
+                            <input type="text" id="behavioral_purchase_frequency" name="behavioral_purchase_frequency" placeholder="كم مرة يشتري العميل المثالي منتجك؟">
+                        </div>
+
+                        <div class="input">
+                            <label for="behavioral_purchase_amount">
+                                💵 قيمة الشراء المتوقعة
+                                <span style="color: #999; font-size: 0.85em;"> (قيم متوسطة للشراء الواحد)</span>
+                            </label>
+                            <input type="text" id="behavioral_purchase_amount" name="behavioral_purchase_amount" placeholder="ما القيمة المتوسطة لعملية الشراء الواحدة؟">
+                        </div>
+
+                        <div class="input">
+                            <label for="behavioral_benefits">
+                                🎁 الفوائد التي يبحث عنها
+                                <span style="color: #999; font-size: 0.85em;"> (الراحة، الأداء، السعر المنخفض، الجودة...)</span>
+                            </label>
+                            <input type="text" id="behavioral_benefits" name="behavioral_benefits" placeholder="ما أهم الفوائد لعملائك؟ (الجودة، السعر، التوفير...)">
+                        </div>
+
+                        <div class="input">
+                            <label for="behavioral_loyalty">
+                                🤝 مستوى الولاء والثقة
+                                <span style="color: #999; font-size: 0.85em;"> (عملاء مخلصون، يتنقلون بين العلامات...)</span>
+                            </label>
+                            <input type="text" id="behavioral_loyalty" name="behavioral_loyalty" placeholder="هل عملاؤك الحاليون مخلصون أم يبحثون دائماً عن بدائل؟">
+                        </div>
+
+                        <div class="input">
+                            <label for="behavioral_seasonal">
+                                📅 الأنماط الموسمية
+                                <span style="color: #999; font-size: 0.85em;"> (متى يزداد الشراء؟ هل هناك أوقات محددة؟)</span>
+                            </label>
+                            <input type="text" id="behavioral_seasonal" name="behavioral_seasonal" placeholder="هل الشراء يختلف حسب الموسم أو المناسبات؟">
+                        </div>
+                    </div>
+
+                    <!-- Technographic Segmentation Section -->
+                    <div style="border-right: 4px solid #a8e6cf; padding-right: 15px; margin-bottom: 25px;">
+                        <h4 style="color: #a8e6cf; margin-bottom: 15px;">
+                            <i class="fas fa-laptop" style="margin-left: 8px;"></i> التجزئة التكنولوجية 💻
+                        </h4>
+                        <p style="font-size: 0.85em; color: #555; margin-bottom: 12px;">
+                            تصنيف العملاء بناءً على مستوى تبنيهم للتكنولوجيا وخبرتهم
+                        </p>
+
+                        <div class="input">
+                            <label for="technographic_adoption_level">
+                                📱 مستوى تبني التكنولوجيا
+                                <span style="color: #999; font-size: 0.85em;"> (متقدم جداً، متوسط، مبتدئ)</span>
+                            </label>
+                            <input type="text" id="technographic_adoption_level" name="technographic_adoption_level" placeholder="هل عملاؤك من المتقدمين تكنولوجياً أم لديهم مستوى متوسط؟">
+                        </div>
+
+                        <div class="input">
+                            <label for="technographic_devices">
+                                🖥️ الأجهزة المستخدمة
+                                <span style="color: #999; font-size: 0.85em;"> (هاتف ذكي، حاسوب، تابلت...)</span>
+                            </label>
+                            <input type="text" id="technographic_devices" name="technographic_devices" placeholder="ما الأجهزة التي يستخدمها عملاؤك؟">
+                        </div>
+
+                        <div class="input">
+                            <label for="technographic_channels">
+                                🌐 القنوات الرقمية المفضلة
+                                <span style="color: #999; font-size: 0.85em;"> (وسائل تواصل، تطبيقات، مواقع ويب...)</span>
+                            </label>
+                            <input type="text" id="technographic_channels" name="technographic_channels" placeholder="أين يقضون وقتهم على الإنترنت؟ (فيسبوك، إنستجرام، تطبيقات...)">
+                        </div>
+
+                        <div class="input">
+                            <label for="technographic_purchase_method">
+                                🛒 طريقة الشراء المفضلة
+                                <span style="color: #999; font-size: 0.85em;"> (متجر إلكتروني، تطبيق، متجر فعلي...)</span>
+                            </label>
+                            <input type="text" id="technographic_purchase_method" name="technographic_purchase_method" placeholder="كيف يفضلون الشراء؟ (أونلاين، تطبيق، المتجر الفعلي...)">
+                        </div>
+
+                        <div class="input">
+                            <label for="technographic_skills">
+                                🎓 مستوى المهارات الرقمية
+                                <span style="color: #999; font-size: 0.85em;"> (عالية، متوسطة، منخفضة)</span>
+                            </label>
+                            <input type="text" id="technographic_skills" name="technographic_skills" placeholder="هل هم يتقنون الأدوات الرقمية بسهولة أم يحتاجون دعماً؟">
+                        </div>
+                    </div>
+
+                    <!-- Needs-based Segmentation Section -->
+                    <div style="border-right: 4px solid #ff6b9d; padding-right: 15px; margin-bottom: 25px;">
+                        <h4 style="color: #ff6b9d; margin-bottom: 15px;">
+                            <i class="fas fa-lightbulb" style="margin-left: 8px;"></i> التجزئة على أساس الاحتياجات ⭐
+                        </h4>
+                        <p style="font-size: 0.85em; color: #555; margin-bottom: 12px;">
+                            تصنيف العملاء بناءً على احتياجاتهم الأساسية والمشاكل التي يحلها منتجك
+                        </p>
+
+                        <div class="input">
+                            <label for="needs_primary_problem">
+                                🚨 المشكلة الأساسية التي يواجهها
+                                <span style="color: #999; font-size: 0.85em;"> (ما المشكلة التي يحلها منتجك؟)</span>
+                            </label>
+                            <textarea id="needs_primary_problem" name="needs_primary_problem" placeholder="ما المشكلة الرئيسية التي يعاني منها عملاؤك وتريد منتجك أن يحلها؟"></textarea>
+                        </div>
+
+                        <div class="input">
+                            <label for="needs_basic_needs">
+                                🔧 الاحتياجات الأساسية
+                                <span style="color: #999; font-size: 0.85em;"> (وظائف أساسية يجب أن يوفرها المنتج)</span>
+                            </label>
+                            <textarea id="needs_basic_needs" name="needs_basic_needs" placeholder="ما الاحتياجات الأساسية المشروعة؟ (الجودة، الموثوقية، السهولة...)"></textarea>
+                        </div>
+
+                        <div class="input">
+                            <label for="needs_emotional_needs">
+                                💝 الاحتياجات العاطفية والنفسية
+                                <span style="color: #999; font-size: 0.85em;"> (الشعور بالأمان، الثقة، الانتماء...)</span>
+                            </label>
+                            <textarea id="needs_emotional_needs" name="needs_emotional_needs" placeholder="ما الاحتياجات العاطفية؟ (الأمان، الثقة، الشعور بالقيمة...)"></textarea>
+                        </div>
+
+                        <div class="input">
+                            <label for="needs_desired_outcomes">
+                                🎯 النتائج المرغوبة والفوائد
+                                <span style="color: #999; font-size: 0.85em;"> (ما الذي يريدون تحقيقه بعد استخدام المنتج؟)</span>
+                            </label>
+                            <textarea id="needs_desired_outcomes" name="needs_desired_outcomes" placeholder="ما النتائج التي يأملون تحقيقها؟ (توفير الوقت، زيادة الأرباح، راحة البال...)"></textarea>
+                        </div>
+
+                        <div class="input">
+                            <label for="needs_decision_factors">
+                                🤔 العوامل الأساسية في القرار الشرائي
+                                <span style="color: #999; font-size: 0.85em;"> (ما الذي يؤثر على قرارهم بالشراء؟)</span>
+                            </label>
+                            <textarea id="needs_decision_factors" name="needs_decision_factors" placeholder="ما العوامل التي تؤثر على قرار الشراء؟ (السعر، الجودة، التوصيات، الضمان...)"></textarea>
+                        </div>
+                    </div>
+
+                </form>
+
+                <div class="group">
+                    <button class="btn prev next">
+                        السابق
+                    </button>
+                    <button class="btn submit">
+                        التالي
+                    </button>
+                </div>
+        </div>
+
+        <div class="pop-up apply-task stp-3 ">
+            <!-- Close ICON -->
+            <div class="close-icon">
+                <i class="fa-solid fa-x"></i>
+            </div>
+            <h3>
+                🎯 طبّق الاستهداف (Targeting) - اختر شريحتك المستهدفة
+            </h3> 
+            <form action="" class="form">
+                <p style="font-size: 0.9em; color: #666; margin-bottom: 20px; text-align: right;">
+                    الآن حان وقت تطبيق الاستهداف! بعد أن قمت بتجزئة السوق إلى شرائح مختلفة، يجب عليك اختيار الشريحة أو الشرائح الأكثر جاذبية وربحية لمنتجك.
+                    يعتمد اختيار الشريحة المستهدفة على عدة عوامل مثل: حجم السوق، إمكانية الوصول والتسويق لهذه الشريحة، قدرتها الشرائية، ومستوى المنافسة فيها.
+                    قيّم كل شريحة بعناية واختر الأفضل لمنتجك لتحقيق أقصى نجاح.
+                </p>
+
+                <div class="country-selection">
+                        <div class="checkbox-wrapper-12">
+                            <div class="cbx">
+                                <input type="radio" class="country" id="segment-high-income" name="target_segment" value="high_income">
+                                <span for="segment-high-income"></span>
+        
+                                <svg fill="none" viewBox="0 0 15 14" height="14" width="15">
+                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                </svg>
+                                <label for="segment-high-income">
+                                    أصحاب الأعمال (قدرة دفع عالية، حجم سوق قليل، صعوبة الشراء)
+                                </label>
+                            </div>
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <filter id="goo-12">
+                                        <feGaussianBlur result="blur" stdDeviation="4" in="SourceGraphic"></feGaussianBlur>
+                                        <feColorMatrix result="goo-12" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" mode="matrix" in="blur"></feColorMatrix>
+                                        <feBlend in2="goo-12" in="SourceGraphic"></feBlend>
+                                    </filter>
+                                </defs>
+                            </svg>
+                        </div>
+
+                        <div class="checkbox-wrapper-12">
+                            <div class="cbx">
+                                <input type="radio" class="country" id="segment-middle-income" name="target_segment" value="middle_income">
+                                <span for="segment-middle-income"></span>
+        
+                                <svg fill="none" viewBox="0 0 15 14" height="14" width="15">
+                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                </svg>
+                                <label for="segment-middle-income">
+                                    الطبقة المتوسطة (قدرة دفع متوسطة، حجم سوق كبير، سهولة الشراء)
+                                </label>
+                            </div>
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <filter id="goo-12">
+                                        <feGaussianBlur result="blur" stdDeviation="4" in="SourceGraphic"></feGaussianBlur>
+                                        <feColorMatrix result="goo-12" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" mode="matrix" in="blur"></feColorMatrix>
+                                        <feBlend in2="goo-12" in="SourceGraphic"></feBlend>
+                                    </filter>
+                                </defs>
+                            </svg>
+                        </div>
+
+                        <div class="checkbox-wrapper-12">
+                            <div class="cbx">
+                                <input type="radio" class="country" id="segment-students" name="target_segment" value="students">
+                                <span for="segment-students"></span>
+        
+                                <svg fill="none" viewBox="0 0 15 14" height="14" width="15">
+                                    <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                </svg>
+                                <label for="segment-students">
+                                    الطلاب (قدرة دفع منخفضة، حجم سوق متوسط، سهولة الشراء)
+                                </label>
+                            </div>
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <filter id="goo-12">
+                                        <feGaussianBlur result="blur" stdDeviation="4" in="SourceGraphic"></feGaussianBlur>
+                                        <feColorMatrix result="goo-12" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" mode="matrix" in="blur"></feColorMatrix>
+                                        <feBlend in2="goo-12" in="SourceGraphic"></feBlend>
+                                    </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                </div>
+
+
+
+
+            </form>
+
+            <div class="group">
+                <button class="btn prev next">
+                    السابق
+                </button>
+                <button class="btn submit">
+                    التالي
+                </button>
+            </div>
+            
+
+
+        </div>
+        <div class="pop-up apply-task stp-4 ">
+            <!-- Close ICON -->
+            <div class="close-icon">
+                <i class="fa-solid fa-x"></i>
+            </div>
+            <h3>
+                 تحديد موضع المنتج (Positioning) 🗺️ - اختر شرائحك المستهدفة
+            </h3> 
+            <form action="" class="form">
+                <p >
+                    كيف ستقدم منتجك لكل شريحة مستهدفة؟ ما الرسالة المختلفة لكل شريحة؟
+                </p>
+
+                <!-- Positioning for Each Segment -->
+                <div style="border-right: 4px solid #00b894; padding-right: 15px; margin-bottom: 25px;">
+
+                    <div class="input">
+                        <label for="positioning_primary">
+                            📢 رسالة التسويق للشريحة الأساسية
+                            <span style="color: #999; font-size: 0.85em;"> (ما الفائدة الرئيسية التي تركز عليها مع هذه الشريحة؟)</span>
+                        </label>
+                        <textarea id="positioning_primary" name="positioning_primary" placeholder="كيف تريد أن ينظر هذا الشريحة إلى منتجك؟ ما الفائدة الأساسية التي ستؤكد عليها؟ مثال: 'الحل الأسهل والأسرع' أو 'الخيار الأقتصادي الموثوق'"></textarea>
+                    </div>
+
+                    <div class="input">
+                        <label for="positiong_mind_image">
+                            🎨 ما هي الصورة الذي تريد ان يفكر بها العميل عليك؟
+                            <span style="color: #999; font-size: 0.85em;"> (مثل صورة الذهنية بالقيمة الإجتماعية الخاصة بأبل)</span>
+                        </label>
+                        <textarea id="positiong_mind_image" name="positiong_mind_image" placeholder="ما هي طريقة التصور عن علامتك التجارية؟" ></textarea>
+                    </div>
+
+                    <div class="input">
+                        <label for="positioning_unique">
+                            💎 العرض الفريد (Unique Value Proposition)
+                            <span style="color: #999; font-size: 0.85em;"> (ما الذي يميز منتجك عن المنافسين؟)</span>
+                        </label>
+                        <textarea id="positioning_unique" name="positioning_unique" placeholder="ما الذي يجعل منتجك مختلفاً عن المنافسين؟ ما الذي لا يستطيع المنافسون تقديمه؟"></textarea>
+                    </div>
+                </div>
+
+
+            </form>
+
+            <div class="group">
+                <button class="btn prev next">
+                    السابق
+                </button>
+                <button class="btn submit">
+                    التالي
+                </button>
+    </div>
+            
+
+
+        </div>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="aiChat">
+            <img src="imgs/ai_robot.png" alt="Ai ROBOT">
+        </div>
+        <div class="icons">
+            <div class="icon sound-icon play" onclick="toogleMute()">
+                <i class="fas fa-volume-high"></i>
+            </div>
+            <div class="icon settingIcon" onclick="tooglePops('.settingIcon' , '.pop-up.setting')">
+                <i class="fas fa-gear"></i>
+            </div>
+        </div>
+    </footer>
 
     </div>
 
@@ -174,6 +675,8 @@
     <script src="js/orientation.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/levels.js"></script>
+    <script src="js/stp.js"></script>
+
     <script src="js/game.js"></script>
 </body>
 </html>

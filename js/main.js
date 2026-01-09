@@ -1,6 +1,17 @@
 const fields = ['fashion'];
 
 
+const introDiv = document.querySelector('.intro');
+
+const logo = introDiv.querySelector('img.logo');
+const bgmusic = document.querySelector('audio#bgMusic');
+const bgMusicVolume = 0.4;
+
+
+
+bgmusic.volume = bgMusicVolume;
+
+
 
 
 
@@ -8,25 +19,17 @@ document.addEventListener('DOMContentLoaded' , () => {
 
     showVideoIntro();
     initFullscreenToggle();
+    // bgmusic.play();
+
 })
 
 
-document.onload = function () {
-    showVideoIntro();
-}
-
-const bgMusicVolume = 0.4;
 
 
 
 
 
 
-const introDiv = document.querySelector('.intro');
-
-const logo = introDiv.querySelector('img.logo');
-const bgmusic = document.querySelector('audio#bgMusic');
-bgmusic.volume = bgMusicVolume;
 
 
 document.querySelector('#startGame').addEventListener('click' , () => {
@@ -34,6 +37,8 @@ document.querySelector('#startGame').addEventListener('click' , () => {
 
     goFullscreen();
     bgmusic.play();
+
+    resetScreen();
 
 });
 
@@ -156,6 +161,7 @@ function setProgressWidth(percentage) {
     }
 }
 
-// مثال على الاستخدام:
-// setProgressWidth(60); // سيجعل الـ progress bar يصل إلى 60%
 
+function resetScreen() {
+    scrollTo( 0,0 );
+}

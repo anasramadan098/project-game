@@ -79,6 +79,9 @@ function saveData(e) {
         return;
     }
     let data = collectFormData();
+    data.xp = 0;
+    data.level = 1;
+    data.coins = 100;
     
     localStorage.setItem('user' , JSON.stringify(data));
 
@@ -167,13 +170,45 @@ function login(element) {
 
 // Enter The Data 
 const gameloopy = document.querySelector('.game-loopy');
+const settingPop = document.querySelector('.pop-up.setting');
+
 if (gameloopy) {
+    fillLoppyData()
+}
+
+if (settingPop) {
+
+
+    settingPop.querySelector('#update-btn').addEventListener('click' , () => {
+        const form = settingPop.querySelector('form');
+        const formData = new FormData(form);
+        const updatedUser = {};
+        for (let [key, value] of formData.entries()) {
+            updatedUser[key] = value;
+        }
+        // Merge with existing user data, or replace entirely
+        Object.assign(user, updatedUser);
+        localStorage.setItem('user', JSON.stringify(user));
+        showMessage('تم تحديث البيانات بنجاح!');
+        fillLoppyData(settingPop , user);
+
+        settingPop.classList.remove('active');
+    })
+
+}
+
+function fillLoppyData() {
+
     gameloopy.querySelector('.player-name').textContent = user.full_name;
     gameloopy.querySelector('.progress.xp').dataset.text = `${user.xp} XP`;
-    gameloopy.querySelector('.level').textContent = 3;
+    gameloopy.querySelector('.level').textContent = user.level;
     
-    gameloopy.querySelector('.progress.coins').dataset.text = `${user.coins}`;
+    gameloopy.querySelector('.progress.coins').dataset.text = `${user.coins}`;  
 
 
-    
+
+    settingPop.querySelector('input[name="full_name"]').value = user.full_name;
+    settingPop.querySelector('input[name="age"]').value = user.age;
+    settingPop.querySelector('input[name="phone"]').value = user.phone;
+    settingPop.querySelector('input[name="email"]').value = user.email;
 }
