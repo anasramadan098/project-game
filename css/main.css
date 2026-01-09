@@ -23,6 +23,15 @@ a {
     height: var(--height);
 }
 
+.reset-screen {
+    position: absolute !important;
+    right: 1%;
+    top: 2%;
+    font-size: 11px;
+    padding: 5px 10px;
+    font-style: normal;
+}
+
 body {
     position: relative;
     overflow: hidden;
