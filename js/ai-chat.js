@@ -138,14 +138,15 @@ async function  sendToApi(sys, userMsg) {
         { "role": "user", "content": userMsg }
     ];
 
+
+    // GET API FROM FETCH
+    const sec_api = fetch('')
+
     try {
-        const response = await fetch(`https://openrouter.ai/api/v1/chat/completions`, {
+        const response = await fetch(`https://salesflow.anasramadanking.workers.dev/`, {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${a_api}`,
-                'Content-Type': 'application/json',
-                'HTTP-Referer': window.location.href, // مطلوب من OpenRouter عند الرفع على سيرفر
-                'X-Title': 'Marketing Game' // اسم اللعبة لتعريف الطلب
             },
             body: JSON.stringify({
                     "model": freeModel,
