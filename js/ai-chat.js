@@ -125,7 +125,7 @@ async function  sendToApi(sys, userMsg) {
     // SEND API
     const api = 'pk_KcjFDqm5HGaNexsX';
     const model = 'qwen-coder';
-    const a_api = `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`;
+    const a_api = `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`;
     const freeModel = "google/gemma-3-27b-it:free";
 
 
@@ -143,7 +143,9 @@ async function  sendToApi(sys, userMsg) {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${a_api}`,
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'HTTP-Referer': window.location.href, // مطلوب من OpenRouter عند الرفع على سيرفر
+                'X-Title': 'Marketing Game' // اسم اللعبة لتعريف الطلب
             },
             body: JSON.stringify({
                     "model": freeModel,
