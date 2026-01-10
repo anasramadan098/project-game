@@ -37,7 +37,7 @@ function sendForm() {
     const msg = `
     
     <div class="msg user">
-        <img src="imgs/defualt-boy.png" alt="DEFUALT BOY MARKETLY">
+        <img src="imgs/defualt-${user.gender}.png" alt="DEFUALT BOY MARKETLY">
         <div class="text">
             <div>
                 ${userPrompt}
