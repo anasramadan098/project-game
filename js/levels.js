@@ -349,8 +349,8 @@ function earnPoints(pointType , points) {
         earningShow.classList.remove('active');
 
         let index = 0;
-        const xpeffect = new Audio('./music/xp.mp3')
-        const coinseffect = new Audio('./music/coin.mp3')
+        const xpeffect = new Audio('../music/xp.mp3')
+        const coinseffect = new Audio('../music/coin.mp3')
 
         const counter = setInterval(() => {
             if (pointType == 'xp') {
@@ -524,5 +524,4 @@ function completeVideoView(taskId , lesson) {
 
 function saveUser() {
     localStorage.setItem('user' , JSON.stringify(user));
-
 }
