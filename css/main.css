@@ -23,15 +23,6 @@ a {
     height: var(--height);
 }
 
-.reset-screen {
-    position: absolute !important;
-    right: 1%;
-    top: 2%;
-    font-size: 11px;
-    padding: 5px 10px;
-    font-style: normal;
-}
-
 body {
     position: relative;
     overflow: hidden;
@@ -70,7 +61,7 @@ body {
         margin-bottom: 20px;
         text-align: right;
     }
-    > div:not(.close-icon) , > form {
+    > div:not(.close-icon) , > form , > table   {
             overflow: scroll;
             max-height: 250px;
             scrollbar-width: none; /* Firefox */
@@ -119,7 +110,6 @@ body {
         border-width: 5px;
     }
 }
-
 .intro {
     min-width: 100vw;
     height: 400px;

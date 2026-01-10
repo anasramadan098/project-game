@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded' , () => {
 
     showVideoIntro();
     initFullscreenToggle();
-    // bgmusic.play();
+    bgmusic.play();
 
 })
 

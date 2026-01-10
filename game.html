@@ -117,9 +117,16 @@
         </video>
 
 
-        <button class="btn reset-screen" onclick="resetScreen()">
-            ظبت زوايا الشاشة
-        </button>
+       <div class="top-right">
+        <div class="icons">
+            <div class="icon fullscreen-toggle full-screen">
+                    <i class="fa-solid fa-expand"></i>
+            </div>
+            <div class="icon leadboardIcon" onclick="tooglePops('.leadboardIcon' , '.pop-up.leadboard')">
+                <i class="fas fa-chart-line"></i>
+            </div>
+        </div>
+       </div>
 
         <!-- Header -->
         <header class="header">
@@ -194,7 +201,324 @@
                 </span>
             </div>
         </div>
+
+
+        <div class="pop-up leadboard ">
+            <!-- Close ICON -->
+            <div class="close-icon">
+                <i class="fa-solid fa-x"></i>
+            </div>
+            <h3>
+               قائمة المنافسين الأخرين في السوق
+            </h3>
+            <div>
+            <table>
+                <thead>
+                    <tr>
+                        <td>
+                            الصورة
+                        </td>
+                        <td>
+                            الإسم
+                        </td>
+                        <td>
+                            المستوي الحالي
+                        </td>
+                        <td>
+                           النقود
+                        </td>
+                        <td>
+                           عدد العملاء
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="./imgs/defualt-boy.png" alt="player">
+                        </td>
+                        <td>
+                            أحمد محمد
+                        </td>
+                        <td>
+                            12
+                        </td>
+                        <td>
+                           15400
+                        </td>
+                        <td>
+                           340
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./imgs/defualt-girl.png" alt="player">
+                        </td>
+                        <td>
+                            سارة علي
+                        </td>
+                        <td>
+                            9
+                        </td>
+                        <td>
+                           11200
+                        </td>
+                        <td>
+                           210
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./imgs/defualt-boy.png" alt="player">
+                        </td>
+                        <td>
+                            محمود حسن
+                        </td>
+                        <td>
+                            7
+                        </td>
+                        <td>
+                           8500
+                        </td>
+                        <td>
+                           150
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./imgs/defualt-girl.png" alt="player">
+                        </td>
+                        <td>
+                            نور إبراهيم
+                        </td>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                           5000
+                        </td>
+                        <td>
+                           95
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./imgs/defualt-boy.png" alt="player">
+                        </td>
+                        <td>
+                            عمر خالد
+                        </td>
+                        <td>
+                            4
+                        </td>
+                        <td>
+                           3200
+                        </td>
+                        <td>
+                           40
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./imgs/defualt-boy.png" alt="player">
+                        </td>
+                        <td>
+                            يوسف أحمد
+                        </td>
+                        <td>
+                            15
+                        </td>
+                        <td>
+                           20000
+                        </td>
+                        <td>
+                           450
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./imgs/defualt-girl.png" alt="player">
+                        </td>
+                        <td>
+                            مريم مصطفى
+                        </td>
+                        <td>
+                            14
+                        </td>
+                        <td>
+                           18500
+                        </td>
+                        <td>
+                           410
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./imgs/defualt-boy.png" alt="player">
+                        </td>
+                        <td>
+                            كريم عادل
+                        </td>
+                        <td>
+                            11
+                        </td>
+                        <td>
+                           14200
+                        </td>
+                        <td>
+                           300
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./imgs/defualt-girl.png" alt="player">
+                        </td>
+                        <td>
+                            هبة الله
+                        </td>
+                        <td>
+                            10
+                        </td>
+                        <td>
+                           12500
+                        </td>
+                        <td>
+                           280
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./imgs/defualt-boy.png" alt="player">
+                        </td>
+                        <td>
+                            مصطفى محمود
+                        </td>
+                        <td>
+                            8
+                        </td>
+                        <td>
+                           9800
+                        </td>
+                        <td>
+                           190
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./imgs/defualt-girl.png" alt="player">
+                        </td>
+                        <td>
+                            آية كمال
+                        </td>
+                        <td>
+                            6
+                        </td>
+                        <td>
+                           6700
+                        </td>
+                        <td>
+                           120
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./imgs/defualt-boy.png" alt="player">
+                        </td>
+                        <td>
+                            زياد طارق
+                        </td>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                           5500
+                        </td>
+                        <td>
+                           100
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./imgs/defualt-girl.png" alt="player">
+                        </td>
+                        <td>
+                            سلمى حسين
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                           2800
+                        </td>
+                        <td>
+                           35
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./imgs/defualt-boy.png" alt="player">
+                        </td>
+                        <td>
+                            علي حسن
+                        </td>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                           1500
+                        </td>
+                        <td>
+                           15
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./imgs/defualt-girl.png" alt="player">
+                        </td>
+                        <td>
+                            رنا إيهاب
+                        </td>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                           800
+                        </td>
+                        <td>
+                           5
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
         
+
+
+        <div class="pop-up chat-ai">
+            <!-- Close ICON -->
+            <div class="close-icon">
+                <i class="fa-solid fa-x"></i>
+            </div>
+            <h3>
+                تحدث مع <span> Marketly </span> مساعدك الذكي
+            </h3>
+            <div class="chat">
+
+                <div class="chat-msgs">
+
+
+                </div> 
+            </div>
+            <form id="msg-ai-prompt-form">
+                <input type="text" name="msg-prompt" placeholder="إكتب رسالتك لماركتلي..." >
+                <input type="submit" value="ارسال" class="btn msg-btn">
+                <a href="#"  class="btn analysis-btn">
+                    تحليل 
+                </a>
+            </form>
+        </div>
+
 
 
     <!-- Another Pop Ups -->
@@ -659,7 +983,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="aiChat">
+        <div class="aiChat" onclick="tooglePops('.aiChat' , '.pop-up.chat-ai')">
             <img src="imgs/ai_robot.png" alt="Ai ROBOT">
         </div>
         <div class="icons">
@@ -668,6 +992,9 @@
             </div>
             <div class="icon settingIcon" onclick="tooglePops('.settingIcon' , '.pop-up.setting')">
                 <i class="fas fa-gear"></i>
+            </div>
+            <div class="icon resetScreen" onclick="resetScreen()"> 
+                <i class="fas fa-arrows-rotate"></i>
             </div>
         </div>
     </footer>
@@ -680,7 +1007,8 @@
     <script src="js/storage.js"></script>
     <script src="js/levels.js"></script>
     <script src="js/stp.js"></script>
-
+    
     <script src="js/game.js"></script>
+    <script src="js/ai-chat.js"></script>
 </body>
 </html>

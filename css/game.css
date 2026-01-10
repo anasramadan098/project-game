@@ -120,6 +120,77 @@
         font-size: 14px;
     }
 
+    .top-right {
+        position: absolute !important;
+        right: 1%;
+        top: 2%;
+    }
+
+    .icons {
+        display: flex;
+        gap: 20px;
+        .icon {
+            background-color: color-mix(in srgb, var(--main-color) 10%, var(--main-color) 40%);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            cursor: pointer;
+            transition: .3s;
+            &:hover {
+                    background-color: color-mix(in srgb, var(--main-color) 100%, var(--main-color) 100%);
+            } 
+            i {
+                color: #fff;
+                font-size: 1.2em ;
+            }
+        }
+    } 
+    .fullscreen-toggle {
+        position: static ;
+    }
+
+
+    .leadboard {
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            tr {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                transition: .3s;
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.05);
+                }
+            }
+            td {
+                padding: 10px;
+                text-align: center;
+                color: #dfdfdf;
+                font-size: 0.9em;
+                vertical-align: middle;
+            }
+            /* Header Styling */
+            thead tr td {
+                color: var(--seconde-color);
+                font-weight: bold;
+                padding-bottom: 15px;
+            }
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+                background-color: #fff;
+                border: 2px solid var(--main-color);
+            }
+        }
+    }
+
 
     .footer {
         display: flex;
@@ -145,26 +216,7 @@
             }
         
         }
-        .icons {
-            display: flex;
-            gap: 20px;
-            .icon {
-                background-color: color-mix(in srgb, var(--main-color) 10%, var(--main-color) 40%);
-                padding: 20px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-                border: 3px solid #fff;
-                i {
-                    color: #fff;
-                    font-size: 1.2em ;
-                }
 
-            }
-        } 
 
 
     }
@@ -236,6 +288,68 @@
                     font-size: .7em;
                     margin: 8px 0 5px;
                 }             
+            }
+        }
+    }
+    .chat {
+        max-height: 150px !important;
+    }
+    .chat-ai {
+        /* background-color: #fff; */
+        h3 {
+            text-align: right;
+            span {
+                color: var(--seconde-color);
+            }
+        }
+        .chat-msgs {
+            .msg {
+                padding: 10px;
+                border-radius: 6px;
+                border: 1px solid #777;
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                &.ai {
+                    flex-direction: row-reverse;
+                    .text {
+                        text-align: left;
+                    }
+                }
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    object-fit: contain;
+                    border: 2px solid var(--main-color);
+                }
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    div , p {
+                        font-size: 13px;
+                        margin: 0;
+                        color: #fff;
+                    }
+                    span {
+                        color: #777;
+                        font-size: 10px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        form {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .btn {
+                margin-top: 0;
+                padding: 10px 20px;
+                font-style: normal;
+
             }
         }
     }
