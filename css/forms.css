@@ -1,99 +1,96 @@
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-
-    .cards {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-            align-items: center;
-            width: 100%;
-            .card {
-                width: calc(100% / 3 - 30px);
-                padding: 10px 20px;
-                border-radius: 15px;
-                border: 1px solid #fff;
-                background-color: transparent;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                transition: .3s;
-                &.active {
-                    border : 2px dashed var(--seconde-color);
-                }
-                i {
-                    color: var(--main-color);
-                    font-size: 3em;
-                }
-                h4 {
-                    color: #fff;
-                    font-size: .9em;
-                    margin: 5px 0;
-                }
-                p {
-                    font-size: .8em;
-                    color: #999;
-                }
-            }
-    }
-    .title {
-        text-align: center;
-        color: #fff;
-        font-weight: bold;
-        margin-bottom: 30px;
-    }
-    > .input {
-        width: 100%;
-    }
-    .group {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        width: 100%;
-        .input {
-            width: calc(100% / 2 - 20px);
-
-        }
-    }
-    label {
-        color: #ddd;
-        margin-bottom: 5px;
-        font-size: 13px;
-        span {
-            color: red;
-        }
-    }
-
-    input , select , textarea {
-        margin-top: 5px;
-        border: 2px dashed var(--main-color);
-        border-radius: 15px;
-        padding: 10px ;
-        outline: none;
-        background-color: transparent;
-        color: #fff;
-        font-size: 10px;
-        width: 100%;
-        resize: none;
-        text-align: right;
-        transition: .3s;
-        &:hover {
-            border-width: 3px;
-            background-color: #333;
-        }
-    }
-    .btn {
-        margin-top: 20px;
-        color: #000;
-        font-size: 13px;
-        &.back {
-            border: 2px dashed var(--seconde-color);
-            background: var(--main-color);
-            color: #fff;
-        }
-    }
-
+	 display: flex;
+	 flex-direction: column;
+	 gap: 10px;
+	 align-items: center;
 }
+ form .cards {
+	 display: flex;
+	 gap: 30px;
+	 flex-wrap: wrap;
+	 align-items: center;
+	 width: 100%;
+}
+ form .cards .card {
+	 width: calc(100% / 3 - 30px);
+	 padding: 10px 20px;
+	 border-radius: 15px;
+	 border: 1px solid #fff;
+	 background-color: transparent;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 flex-direction: column;
+	 transition: 0.3s;
+}
+ form .cards .card.active {
+	 border: 2px dashed var(--seconde-color);
+}
+ form .cards .card i {
+	 color: var(--main-color);
+	 font-size: 3em;
+}
+ form .cards .card h4 {
+	 color: #fff;
+	 font-size: 0.9em;
+	 margin: 5px 0;
+}
+ form .cards .card p {
+	 font-size: 0.8em;
+	 color: #999;
+}
+ form .title {
+	 text-align: center;
+	 color: #fff;
+	 font-weight: bold;
+	 margin-bottom: 30px;
+}
+ form > .input {
+	 width: 100%;
+}
+ form .group {
+	 display: flex;
+	 justify-content: space-between;
+	 gap: 20px;
+	 width: 100%;
+}
+ form .group .input {
+	 width: calc(100% / 2 - 20px);
+}
+ form label {
+	 color: #ddd;
+	 margin-bottom: 5px;
+	 font-size: 13px;
+}
+ form label span {
+	 color: red;
+}
+ form input, form select, form textarea {
+	 margin-top: 5px;
+	 border: 2px dashed var(--main-color);
+	 border-radius: 15px;
+	 padding: 10px;
+	 outline: none;
+	 background-color: transparent;
+	 color: #fff;
+	 font-size: 10px;
+	 width: 100%;
+	 resize: none;
+	 text-align: right;
+	 transition: 0.3s;
+}
+ form input:hover, form select:hover, form textarea:hover {
+	 border-width: 3px;
+	 background-color: #333;
+}
+ form .btn {
+	 margin-top: 20px;
+	 color: #000;
+	 font-size: 13px;
+}
+ form .btn.back {
+	 border: 2px dashed var(--seconde-color);
+	 background: var(--main-color);
+	 color: #fff;
+}
+ 
