@@ -126,7 +126,7 @@ async function  sendToApi(sys, userMsg) {
     const api = 'pk_KcjFDqm5HGaNexsX';
     const model = 'qwen-coder';
     const a_api = `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`;
-    const freeModel = "google/gemma-3-27b-it:free";
+    const freeModel = "z-ai/glm-4.5-air:free";
 
 
     // Prepare messages with history
