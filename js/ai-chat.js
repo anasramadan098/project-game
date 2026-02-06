@@ -133,10 +133,7 @@ document.querySelector('.analysis-btn').addEventListener('click' ,  () => {
 
 async function  sendToApi(sys, userMsg) {
     // SEND API
-    const api = 'pk_KcjFDqm5HGaNexsX';
-    const model = 'qwen-coder';
-    const a_api = `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`;
-    const freeModel = "google/gemma-3-27b-it:free";
+    const freeModel = "arcee-ai/trinity-large-preview:free";
 
 
     // Prepare messages with history
@@ -147,10 +144,6 @@ async function  sendToApi(sys, userMsg) {
         ...chatHistory,
         { "role": "user", "content": userMsg }
     ];
-
-
-    // GET API FROM FETCH
-    const sec_api = fetch('');
 
     try {
         const response = await fetch(`https://salesflow.anasramadanking.workers.dev/`, {
@@ -206,3 +199,4 @@ async function  sendToApi(sys, userMsg) {
         alert('حدث خطأ أثناء الاتصال بالخدمة المجانية');
     }
 }
+
