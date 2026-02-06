@@ -157,6 +157,7 @@ async function  sendToApi(sys, userMsg) {
         });
 
         const data = await response.json();
+        console.log(data);
         const res = data.choices[0].message.content;
 
         // Update History on Success
