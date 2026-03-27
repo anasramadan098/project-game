@@ -18,13 +18,27 @@
     .rotate-icon {
       font-size: 60px;
       margin: 20px 0;
+      -webkit-animation: rotateAnim 1.5s infinite;
+      -moz-animation: rotateAnim 1.5s infinite;
       animation: rotateAnim 1.5s infinite;
     }
 
+    @-webkit-keyframes rotateAnim {
+      0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+      50% { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
+      100% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    }
+
+    @-moz-keyframes rotateAnim {
+      0% { -moz-transform: rotate(0deg); transform: rotate(0deg); }
+      50% { -moz-transform: rotate(90deg); transform: rotate(90deg); }
+      100% { -moz-transform: rotate(0deg); transform: rotate(0deg); }
+    }
+
     @keyframes rotateAnim {
-      0% { transform: rotate(0deg); }
-      50% { transform: rotate(90deg); }
-      100% { transform: rotate(0deg); }
+      0% { -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); transform: rotate(0deg); }
+      50% { -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); transform: rotate(90deg); }
+      100% { -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); transform: rotate(0deg); }
     }
 
     #rotate-warning button {

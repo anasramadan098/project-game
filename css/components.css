@@ -23,8 +23,27 @@
   width: 40%;
   background: linear-gradient(90deg, #00f260, #0575e6);
   border-radius: 30px;
+  -webkit-animation: grow 3s ease-in-out forwards;
+  -moz-animation: grow 3s ease-in-out forwards;
   animation: grow 3s ease-in-out forwards;
   box-shadow: 0 0 15px #00f260, 0 0 30px #0575e6;
+}
+
+.progress-bar::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  -webkit-transform: translate(50%, -50%);
+  -moz-transform: translate(50%, -50%);
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent);
+  opacity: 0.5;
+  -webkit-animation: ripple 3s infinite;
+  -moz-animation: ripple 3s infinite;
+  animation: ripple 3s infinite;
 }
 
 .progress-bar::before {

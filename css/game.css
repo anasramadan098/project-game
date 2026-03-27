@@ -113,6 +113,8 @@
         position: absolute;
         left: -16px;
         top: 50%;
+        -webkit-transform: translateY(20%) rotate(90deg);
+        -moz-transform: translateY(20%) rotate(90deg);
         transform: translateY(20%) rotate(90deg);
         background: var(--seconde-color);
         padding: 5px 12px;
@@ -130,7 +132,8 @@
         display: flex;
         gap: 20px;
         .icon {
-            background-color: color-mix(in srgb, var(--main-color) 10%, var(--main-color) 40%);
+            background-color: rgba(103, 58, 183, 0.3);
+            background: color-mix(in srgb, var(--main-color) 10%, var(--main-color) 40%);
             padding: 20px;
             display: flex;
             justify-content: center;

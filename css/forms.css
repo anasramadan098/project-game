@@ -20,6 +20,8 @@ form {
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                -webkit-transition: .3s;
+                -moz-transition: .3s;
                 transition: .3s;
                 &.active {
                     border : 2px dashed var(--seconde-color);
