@@ -132,31 +132,33 @@ document.querySelector('.analysis-btn').addEventListener('click' ,  () => {
 
 
 async function  sendToApi(sys, userMsg) {
-    // SEND API
+
     const freeModel = "arcee-ai/trinity-large-preview:free";
 
-
-    // Prepare messages with history
-    // We create a temporary history including the new user message to send to the API
-    // We don't save to permanent storage until success to avoid duplicates on errors
-    const currentMessages = [
+    const allMessages = [
         { "role": "system", "content": sys },
         ...chatHistory,
         { "role": "user", "content": userMsg }
     ];
 
+    // Show loading message instantly
+    LoadMsg(true);
+
     try {
         const response = await fetch(`https://salesflow.anasramadanking.workers.dev/`, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify({
                     "model": freeModel,
-                    "messages": currentMessages,
+                    "messages": allMessages,
                     "user": user.username || "guest_player"
             })
         });
+
+        
+
 
         const data = await response.json();
         const res = data.choices[0].message.content;
@@ -193,10 +195,19 @@ async function  sendToApi(sys, userMsg) {
         // Save
         localStorage.setItem('conv' , msgsHolder.innerHTML);
 
-        
     } catch (error) {
         console.error('Error calling AI API:', error);
         alert('حدث خطأ أثناء الاتصال بالخدمة المجانية');
+    } finally {
+        // Hide loading no matter success/fail
+        LoadMsg(false);
     }
 }
 
+
+function LoadMsg(toogle) {
+    const loadMsg  = document.querySelector('.msg.loading-msg');
+    if (!loadMsg) return;
+
+    toogle ? loadMsg.classList.add('active') : loadMsg.classList.remove('active');
+}
